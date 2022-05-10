@@ -169,6 +169,28 @@ button:hover {
     background-color: rgb(20, 119, 51);
 }
 
+@media screen and (max-width: 600px) {
+    .home, .cb-slideshow {
+        height: 100vh;
+    }
+
+    .canvas {
+        height: calc(100vh - 125px);
+        text-align: center;
+        align-items: center;
+    }
+
+    .canvas > #title-text {
+        padding: 0px;
+    }
+
+    .cb-slideshow li span>img {
+        width: 160%;
+    }
+}
+
+
+
 /* Home navbar */
 
 .navbar {
@@ -176,6 +198,9 @@ button:hover {
     bottom: 0;
     left: 0;
     position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background: transparent;
     border-bottom: 3px solid green;
     height: 50px;
@@ -194,6 +219,19 @@ button:hover {
 
 .navbar a:hover {
     color: rgb(20, 119, 51);
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        bottom: 125px;
+    }
+
+    .navbar a {
+        width: 100%;
+        background-color: #444649;
+        margin: 0;
+        padding: 10px 0 10px 0;
+    }
 }
 
 .about {
@@ -243,6 +281,10 @@ button:hover {
 
 .interests {
     flex-direction: row;
+}
+
+.interests h3 {
+    padding-bottom: 10px; 
 }
 
 .about .column {
@@ -314,5 +356,69 @@ button:hover {
 
 /* Contact form */
 
+.contact {
+    padding: 50px 0 50px 0;
+}
 
+.contact-invite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px 30px 20px;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    color: #444649;
+}
 
+.contact-invite > p {
+    max-width: 500px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    padding-top: 50px; 
+    list-style: none;
+    max-width: 800px;
+}
+
+.contact-form li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form li label {
+    padding: 10px;
+    flex: 1 0 70px;
+    max-width: 300px; 
+}
+
+.contact-form li input,
+.contact-form li textarea {
+    padding: 15px;
+    margin: 15px;
+    flex: 1 0 300px;
+    max-width: 500px;
+    border: none;
+    background: #ddd; 
+}
+
+.contact-form li input[submit] {
+    font-family: raleway, sans-serif;
+    padding: 10px 15px;
+    border: none;
+}
+
+.footer {
+    font-family: raleway;
+    padding: 50px 50px;
+    text-align: center;
+    background: rgb(20, 119, 51);;
+    color: white;
+}
