@@ -364,7 +364,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 20px 30px 20px;
+    padding: 50px 20px 50px 20px;
     font-size: 1.2em;
     line-height: 1.3em;
     color: #444649;
@@ -381,9 +381,10 @@ form {
 }
 
 .contact-form {
-    padding-top: 50px; 
     list-style: none;
     max-width: 800px;
+    flex-basis: 600px;
+    margin: 0 20px;
 }
 
 .contact-form li {
@@ -409,10 +410,16 @@ form {
     background: #ddd; 
 }
 
-.contact-form li input[submit] {
+.contact-form li input[type=submit] {
     font-family: raleway, sans-serif;
-    padding: 10px 15px;
     border: none;
+    flex: .1 0 100px;
+    transition: .5s;
+}
+
+.contact-form li input[type=submit]:hover {
+    color: white;
+    background-color: rgb(20, 119, 51)
 }
 
 .footer {
